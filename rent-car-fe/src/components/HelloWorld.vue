@@ -1,44 +1,72 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-})
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+  <div class="app-container">
+    <h1>Rent Car System</h1>
+    <div class="button-container">
+      <router-link to="/add-car">
+        <button class="action-button">Add Car</button>
+      </router-link>
+      <router-link to="/car">
+        <button class="action-button">View Car</button>
+      </router-link>
+      <router-link to="/booking">
+        <button class="action-button booking-button">Rent A Car!</button>
+      </router-link>
+      <router-link to="/rentals">
+        <button class="action-button">Rent car List</button>
+      </router-link>
+    </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
+.app-container {
   text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
 }
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Menambahkan kolom agar tombol terlihat satu per satu */
+  gap: 10px; /* Memberikan jarak antar tombol */
+}
+
+.action-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px; /* Tambahkan padding agar tombol lebih lebar */
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Membuat tombol lebar 100% menyesuaikan ukuran container */
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.booking-button {
+  background-color: red; /* Set background color to red */
+  color: white; /* Set text color to white */
+}
+
+.action-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.75);
 }
 </style>
