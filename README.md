@@ -72,3 +72,15 @@
           builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
   });
   ```
+
+## Snapshot Preview
+- List Car 
+<img width="656" alt="image" src="https://github.com/user-attachments/assets/d347930c-806e-4db0-a227-9fe8dd98c320" />
+
+- List Rent Car
+<img width="374" alt="image" src="https://github.com/user-attachments/assets/a527fb64-bfe4-486d-8a6c-fb749a1ba788" />
+
+- Book a Car
+<img width="690" alt="image" src="https://github.com/user-attachments/assets/96e621fd-a3ac-4503-b200-08ad442c4124" />
+
+
